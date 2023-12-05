@@ -1,5 +1,5 @@
 import express from "express"
-import { createUser, deleteUser, getUserById, getUsers } from "../contollers/user.js"
+import { createUser, deleteUser, getUserById, getUsers, updateUser } from "../contollers/user.js"
 const router = express.Router()
 
 // Get all users
@@ -10,5 +10,8 @@ router.get("/:id",getUserById)
 router.post('/create', createUser)
 // Delete
 router.delete('/:id', deleteUser)
+// Update user
+router.put('/:id', updateUser)
+
 
 export default router
